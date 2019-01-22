@@ -1,0 +1,43 @@
+@import '../../vars';
+
+.top-header {
+    background: $orange;
+}
+
+.top-header-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    p {
+        display: inline-block;
+        margin-right: 2%;
+    }
+    & p.skype{
+        & i.fa{
+            color: #fff;
+            font-size: 21px;
+        }        
+    }
+
+    & p.email, p.phone {
+
+        display: inline-block;
+        span{
+            color: $colorWhite;
+            font: 18px 'MontserratSemibold';
+            text-transform: uppercase;
+        }
+
+    }
+
+    & a {
+        text-decoration: none;
+        font: 18px 'MontserratSemibold';
+        text-transform: uppercase;
+        color: $colorWhite;
+        transition: all 0.4s;
+        &:hover{
+            color: $red;
+        }
+    }
+}
