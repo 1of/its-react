@@ -1,0 +1,155 @@
+@import '../../vars';
+
+/* SLIDER */
+
+.slider-container {
+    max-width: 100%;
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+
+    box-shadow: -4px 25px 78px -31px rgba(0,0,0,0.7);
+
+}
+.slick-track{
+    height: 40vh;
+
+}
+.slider-wrap {
+    height: 40vh;
+
+    div.slide_1, .div.slide_2{
+        height: 40vh;
+    }
+
+    .slick-arrow {
+        background: $black2;
+        border: none;
+        display: inline-block;
+        width: 46px;
+        height: 106px;
+        opacity: .9;
+        position: absolute;
+        padding: 30px 11px;
+        text-align: center;
+        text-indent: -99999px;
+        transition: opacity .3s;
+        z-index: 5;
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: calc(50% - 53px);
+    }
+    .slick-prev {
+        left: 80px;
+    }
+
+    .slick-next {
+        right: 80px;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 23px);
+        left: calc(50% - 12px);
+        width: 24px;
+        height: 46px;
+    }
+
+    .slick-prev::before {
+        background: url('./img/arrow-icons.png') -84px -20px;
+    }
+
+    .slick-next::before {
+        background: url('./img/arrow-icons.png') -20px -20px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+        height: 40vh;
+    }
+}
+div.slide > div{
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+
+}
+.slide_1{
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.43) 0%, rgba(0,0,0,0.43) 0%), url('./img/team_slide.jpg'); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 0%,rgba(0,0,0,0.43) 0%), url('./img/team_slide.jpg'); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 0%,rgba(0,0,0,0.43) 0%), url('./img/team_slide.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+.slide_2{
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.43) 0%, rgba(0,0,0,0.43) 0%), url('./img/slide_1.jpg'); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 0%,rgba(0,0,0,0.43) 0%), url('./img/slide_1.jpg'); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 0%,rgba(0,0,0,0.43) 0%), url('./img/slide_1.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.slide{
+
+    position: relative;
+}
+.transpaent-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45vh;
+
+}
+
+.slider-text-box{
+    padding-top: 6%;
+    padding-left: 15%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    p{
+        color: #fff;
+        font-size: 2.4vw;
+    }
+    .slider-logos{
+        width: 250px;
+        height: 230px;
+        background: url('./img/projection.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: 10%;
+        position: absolute;
+        right: 5%;
+        img{
+            height: auto;
+        }
+    }
+    .slider-logos_2{
+        height: 5vw;
+        width: 30vw;
+        background: url('./img/certs.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        margin-left: 10%;
+        align-self: flex-end;
+        position: absolute;
+        right: 50px;
+        bottom: -40px;
+        img{
+            
+        }
+    }
+}

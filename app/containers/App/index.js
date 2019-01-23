@@ -12,6 +12,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import PortfolioPage from 'containers/PortfolioPage/Loadable';
 import HeaderTopContacts from 'components/HeaderTopContacts/HeaderTopContacts';
 import NavigationMenu from 'components/Nav/Nav';
 import Footer from 'components/Footer/Footer';
@@ -25,6 +26,7 @@ export default function App() {
       <NavigationMenu />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route path="/portfolio" component={PortfolioPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

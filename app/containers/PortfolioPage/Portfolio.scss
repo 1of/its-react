@@ -1,0 +1,338 @@
+@import "../../vars.scss";
+
+.intro-txt {
+	font-size: 24px;
+	color: $red;
+	text-align: left;
+	font-family: 'MontserratRegular';
+	border-top: 1px solid #aaa;
+	padding: 65px 0 100px 5%;
+}
+.column-1, .column-2 {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+/*Portfolio blocks*/
+.main-content {
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+  .intro-txt {
+      font-size: 24px;
+      color: $red;
+      text-align: left;
+      font-family: 'MontserratRegular';
+      padding: 65px 0 100px 5%;
+  }
+  .column-1, .column-2 {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  
+  }
+  /*Portfolio blocks*/
+  .wrapper {
+    margin: 0 auto;
+  }
+  
+  .small-card .box-img{
+    display: block;
+    position: relative;
+    height: 80%;
+    width: 70%;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .big-card .box-img{
+    display: block;
+    position: relative;
+    height: 80%;
+    width: 50%;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .emmamason {
+    background: url(./img/emmamason-logo.png);
+      background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .fair-audio {
+    background: url(./img/fairaudio-logocop23y.png);
+      background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .moss-bros {
+    background: url(./img/mossbros-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .alamar {
+    background: url(./img/alamar-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .meussa {
+    background: url(./img/melissa-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .rusel-group {
+    background: url(./img/rusel-group-logo.png);
+        background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .altnew {
+    background: url(./img/alten-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .df-store {
+    background: url(./img/df-store-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .theo {
+    background: url(./img/theo-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .maison {
+    background: url(./img/maison-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .ashan {
+    background: url(./img/ashan-logo.png);
+        background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .ajour {
+    background: url(./img/ajour-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .lousse {
+    background: url(./img/lousse-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .formycon {
+    background: url(./img/formycon-logo-main2.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carvalho {
+    background: url(./img/carvalho-logo.png);
+        background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /*fix one ugly pic*/
+  .altnew-main{
+    height: 130%;
+  }
+  
+  .small-card{
+    width: 50%;
+   
+  }
+  .big-card {
+      width: 100%;
+      
+  }
+  .medium-card{
+      width: 100%;
+  }
+  .small-card, .big-card, .medium-card {
+  float: left;
+    margin: 0 0% 0% 0;
+    
+    figure {
+      position: relative;
+      margin: 0;
+      padding-top: 45%;
+      height: 0;
+      overflow: hidden;
+      background: #fff;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+      }
+    }
+    
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      transition: all .9s ease-out;
+    }
+    
+    figcaption {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 80%;
+      z-index: 3;
+      transform: translate(-50%, -50%);
+      font: 2rem sans-serif;
+      padding: 20px 20px;
+      color: #fff;
+      height: 100%;
+    }
+    
+    &:hover {
+      figure::before {
+        display: block;
+      }
+      
+      img {
+        top: -10%;
+        left: -10%;
+        width: 120%;
+      }
+      
+      figcaption {
+        display: block;
+      }
+    }
+  }
+  .small-card a.link{
+      max-width: 140px;
+      margin: 0 auto;
+      background: #747a87;
+      padding: 5px 20px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: 'MontserratRegular';
+      text-decoration: none;
+      width: auto;
+      transition: all 0.3s;
+      text-align: center;
+      text-align: center;
+      display: block;
+      margin: auto;
+  }
+  .big-card a.link{
+      display: block;
+      max-width: 360px;
+      margin: 0 auto;
+      background: #747a87;
+      padding: 10px 30px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: 'MontserratRegular';
+      text-decoration: none;
+      width: auto;
+      transition: all 0.3s;
+      text-align: center;
+          display: block;
+      margin: auto;
+  }
+  .small-card a:hover, .big-card a:hover{
+    background: $gray
+  }
+
+  
+      
+  
+  
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+  .main-content{
+    flex-direction: column;
+  }
+  .column-1, .column-2{
+    width: 100%;
+  }
+  }
+      /**/
+
+  
+  
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 767px) {
+    .main-content{
+    flex-direction: column;
+  }
+  .column-1, .column-2{
+    width: 100%;
+  }
+  
+  .small-card{
+    width: 100%;
+  }
+  .big-card a.link{
+        max-width: 140px;
+      margin: 0 auto;
+      background: #747a87;
+      padding: 5px 20px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: 'MontserratRegular';
+      text-decoration: none;
+      width: auto;
+      transition: all 0.3s;
+      text-align: center;
+      text-align: center;
+      display: block;
+      margin: auto;
+  }
+  
+  }
+  @media only screen and (max-width : 650px) {
+  
+  }
+  
+  @media only screen and (max-width : 580px) {
+  
+      .main-content {
+          flex-direction: column;
+      }
+      .intro-txt{
+          font-size: 2.4rem;
+      } 
+  }

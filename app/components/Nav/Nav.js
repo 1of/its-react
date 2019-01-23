@@ -11,9 +11,9 @@ class Nav extends React.Component {
       <div className="head-outer">
         <div className="header-block" id="heading" />
         <div className="logo">
-          <a href="index.html">
+          <NavLink to="/">
             <img src={Logo} alt="Intechsoft" />
-          </a>
+          </NavLink>
           <a href="#menu" className="menu-link active">
             <span>
               <i className="fa fa-bars" />
