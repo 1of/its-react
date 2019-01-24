@@ -117,7 +117,7 @@ export default class Portfolio extends React.PureComponent {
 
             <div className="small-card">
               <figure>
-                <img src={meussa} alt="" />
+                <img src={meussa} alt="meussa" />
                 <figcaption>
                   <div className="box-img meussa" />
                   <a
@@ -133,7 +133,7 @@ export default class Portfolio extends React.PureComponent {
 
             <div className="small-card">
               <figure>
-                <img src={ruselGroup} alt="" />
+                <img src={ruselGroup} alt="rusel" />
                 <figcaption>
                   <div className="box-img rusel-group" />
                   <a
@@ -149,7 +149,7 @@ export default class Portfolio extends React.PureComponent {
 
             <div className="small-card">
               <figure>
-                <img src={altnew} alt="" className="altnew-main" />
+                <img src={altnew} alt="altnew" className="altnew-main" />
                 <figcaption>
                   <div className="box-img altnew" />
                   <a

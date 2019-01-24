@@ -10,8 +10,11 @@
  */
 
 import React from 'react';
+
 import { FormattedMessage } from 'react-intl';
+
 import HomePageSlider from 'components/HomePageSlider/HomePageSlider';
+import HomePageServices from 'components/HomePageServices/HomePageServices';
 import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -21,6 +24,13 @@ export default class HomePage extends React.PureComponent {
       <div>
         <FormattedMessage {...messages.header} />
         <HomePageSlider />
+        <p>
+          Intechsoft company is an ideal balance between creativity and
+          technology with affordable rates, that will save you huge amount of
+          money with perfect developers that made top e-commerce websites and
+          24/7 support team who are always happy to help You!
+        </p>
+        <HomePageServices />
       </div>
     );
   }

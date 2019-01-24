@@ -1,4 +1,5 @@
 import React from 'react';
+import LocaleToggle from 'containers/LocaleToggle';
 
 import './HeaderTopContacts.scss';
 /* eslint-disable react/prefer-stateless-function */
@@ -6,6 +7,7 @@ class HeaderTopContacts extends React.Component {
   render() {
     return (
       <div className="top-header">
+          <LocaleToggle />
         <div className="top-header-content commonStyle">
           <p className="skype">
             <span>
