@@ -11,7 +11,7 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
-        <NavLink to="/portfolio">
+        <NavLink to="/">
           <img src={Logo} alt="Intechsoft" />
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
