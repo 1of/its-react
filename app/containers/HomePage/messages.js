@@ -8,8 +8,12 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.containers.HomePage';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the HomePage container!',
+  contactus: {
+    id: `${scope}.contactUs`,
+    defaultMessage: 'Contact Us',
+  },
+  ouroffices: {
+    id: `${scope}.ourOffices`,
+    defaultMessage: 'Our offices',
   },
 });

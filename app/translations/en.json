@@ -1,5 +1,6 @@
 {
-  "app.containers.HomePage.header": "This is the HomePage container!",
+  "app.containers.HomePage.contactUs": "Contact Us",
+  "app.containers.HomePage.ourOffices": "Our offices",
   "app.containers.NotFoundPage.header": "This is the NotFoundPage container!",
   "boilerplate.components.Header.career": "Career",
   "boilerplate.components.Header.contact": "Contact Us",
@@ -7,6 +8,7 @@
   "boilerplate.components.Header.outstaffing": "Outstaffing",
   "boilerplate.components.Header.portfolio": "Portfolio",
   "boilerplate.components.Header.services": "Services",
+  "boilerplate.components.HomePageSlider.example": "Text",
   "boilerplate.components.HomePageSlider.yearsdev": "7 Years of Development",
   "boilerplate.containers.LocaleToggle.en": "en",
   "boilerplate.containers.LocaleToggle.ru": "ru"

@@ -14,7 +14,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import PortfolioPage from 'containers/PortfolioPage/Loadable';
 import HeaderTopContacts from 'components/HeaderTopContacts/HeaderTopContacts';
-import NavigationMenu from 'components/Nav/Nav';
+import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import 'app.scss';
 import GlobalStyle from '../../global-styles';
@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div>
       <HeaderTopContacts />
-      <NavigationMenu />
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/portfolio" component={PortfolioPage} />

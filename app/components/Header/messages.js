@@ -28,6 +28,26 @@ export default defineMessages({
     id: `${scope}.contact`,
     defaultMessage: 'Contact Us',
   },
+  magento_design: {
+    id: `${scope}.magento_design`,
+    defaultMessage: 'Magento design',
+  },
+  magento_development: {
+    id: `${scope}.magento_development`,
+    defaultMessage: 'Magento development',
+  },
+  magento_extension_development: {
+    id: `${scope}.magento_extension_development`,
+    defaultMessage: 'Extension development',
+  },
+  magento_hosting: {
+    id: `${scope}.magento_hosting`,
+    defaultMessage: 'Magento hosting',
+  },
+  magento_migration: {
+    id: `${scope}.magento_migration`,
+    defaultMessage: 'Magento migration',
+  },
   design: {
     id: `${scope}.design`,
     defaultMessage: 'Design',
