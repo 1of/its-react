@@ -15,7 +15,7 @@ const PageBanner = props => (
 
 PageBanner.propTypes = {
   bannerImage: PropTypes.string,
-  bannerText: PropTypes.string,
+  bannerText: PropTypes.object,
 };
 
 export default PageBanner;
