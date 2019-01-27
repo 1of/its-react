@@ -25,14 +25,16 @@ import formycon from './img/formycon.jpg';
 import lousse from './img/lousse.png';
 import ajour from './img/ajour.jpg';
 
-// import messages from './messages';
+import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Portfolio extends React.PureComponent {
   render() {
     return (
       <main>
-        <h1 className="intro-txt">Our portfolio</h1>
+        <h1 className="intro-txt">
+          <FormattedMessage {...messages.our_portfolio} />
+        </h1>
         <section className="main-content">
           <div className="column-1">
             <div className="small-card">
@@ -45,7 +47,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2yVlYwC"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -61,7 +63,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2qvLrb0"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -77,7 +79,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2SQiUdc"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -93,7 +95,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2L7aDxc"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -109,7 +111,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2ARL54D"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -125,7 +127,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2Owe6Gv"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -141,7 +143,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2F6mtJF"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -157,7 +159,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2SShq2b"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -173,7 +175,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2qxfpvn"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -191,7 +193,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2STwWe5"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -207,7 +209,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2F6mAVB"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -223,7 +225,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2PNeN2Y"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -239,7 +241,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2SQguvf"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -255,7 +257,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2PfuJeX"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>
@@ -271,7 +273,7 @@ export default class Portfolio extends React.PureComponent {
                     className="link"
                     href="https://bit.ly/2JKzWFI"
                   >
-                    view website
+                    <FormattedMessage {...messages.view_website} />
                   </a>
                 </figcaption>
               </figure>

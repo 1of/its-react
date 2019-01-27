@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
 import './HomePageSlider.scss';
 
 import Slide1 from './img/team_slide.jpg';

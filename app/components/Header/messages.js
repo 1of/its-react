@@ -24,8 +24,8 @@ export default defineMessages({
     id: `${scope}.outstaffing`,
     defaultMessage: 'Outstaffing',
   },
-  contact: {
-    id: `${scope}.contact`,
+  contacts: {
+    id: `${scope}.contacts`,
     defaultMessage: 'Contact Us',
   },
   magento_design: {
@@ -47,6 +47,10 @@ export default defineMessages({
   magento_migration: {
     id: `${scope}.magento_migration`,
     defaultMessage: 'Magento migration',
+  },
+  magento_support: {
+    id: `${scope}.magento_support`,
+    defaultMessage: 'Magento support',
   },
   design: {
     id: `${scope}.design`,

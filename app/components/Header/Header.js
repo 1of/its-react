@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 import NavLink from './NavLink';
 import messages from './messages';
 import Logo from './logo.svg';
@@ -20,36 +21,42 @@ class Header extends React.Component {
           className="justify-content-end"
         >
           <Nav>
-            <NavDropdown title="Services" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/magento-design">
+            <NavDropdown
+              title={<FormattedMessage {...messages.services} />}
+              id="collasible-nav-dropdown"
+            >
+              <Link to="/magento-design" className="dropdown-item">
                 <FormattedMessage {...messages.magento_design} />
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/magento-development">
+              </Link>
+              <Link to="/magento-development" className="dropdown-item">
                 <FormattedMessage {...messages.magento_development} />
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/magento-extension-development">
+              </Link>
+              <Link
+                to="/magento-extension-development"
+                className="dropdown-item"
+              >
                 <FormattedMessage {...messages.magento_extension_development} />
-              </NavDropdown.Item>
+              </Link>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/magento-hosting">
+              <Link to="/magento-hosting" className="dropdown-item">
                 <FormattedMessage {...messages.magento_hosting} />
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/magento-migration">
+              </Link>
+              <Link to="/magento-migration" className="dropdown-item">
                 <FormattedMessage {...messages.magento_migration} />
-              </NavDropdown.Item>
+              </Link>
             </NavDropdown>
-            <Nav.Link href="/portfolio">
+            <Link to="/portfolio" className="nav-link">
               <FormattedMessage {...messages.portfolio} />
-            </Nav.Link>
-            <Nav.Link href="/career">
+            </Link>
+            <Link to="/career" className="nav-link">
               <FormattedMessage {...messages.career} />
-            </Nav.Link>
-            <Nav.Link href="/outstaffing">
+            </Link>
+            <Link to="/outstaffing" className="nav-link">
               <FormattedMessage {...messages.outstaffing} />
-            </Nav.Link>
-            <Nav.Link href="/contact">
-              <FormattedMessage {...messages.contact} />
-            </Nav.Link>
+            </Link>
+            <Link to="/contacts" className="nav-link">
+              <FormattedMessage {...messages.contacts} />
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

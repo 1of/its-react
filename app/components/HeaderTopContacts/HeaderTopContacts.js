@@ -7,8 +7,8 @@ class HeaderTopContacts extends React.Component {
   render() {
     return (
       <div className="top-header">
-          <LocaleToggle />
         <div className="top-header-content commonStyle">
+          <LocaleToggle />
           <p className="skype">
             <span>
               <i className="fa fa-skype" />

@@ -1,0 +1,23 @@
+@import '../../vars';
+
+.header-banner{
+	width: 100%;
+    box-shadow: -4px 25px 60px -31px rgba(0,0,0,0.7);
+    background-size: cover;
+	.transparent-block{
+		background: rgba(0,0,0,0.5);
+		height: 100%;
+		width: 100%;
+		display: flex;
+		h1 {
+			margin: auto;
+			color: #fff;
+			font-family: 'MontserratSemibold';
+			font-size: 60px;
+			text-transform: uppercase;
+			padding: 10% 0;
+			text-align: center;
+
+		}
+	}
+}
