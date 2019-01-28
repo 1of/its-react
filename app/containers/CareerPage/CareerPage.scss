@@ -1,0 +1,164 @@
+
+.services-block{
+    display: flex;
+    margin: 0 auto;
+    background: #bbb9b9;
+    background: linear-gradient(180deg, rgba(255, 255, 255,0.9) 10%,  #bbb9b9 80%), url('../MagentoMigrationPage/magento_migration.jpg');
+    padding: 20px 0 0 0;
+}
+
+.vacansy-items-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+
+    li {
+        width: 356px;
+        height: 300px;
+        overflow: hidden;
+        padding: 20px 25px;
+        text-align: center;
+        margin-bottom: 20px;
+        background: #fff;
+        transition: all 0.3s;
+        &:hover{
+	        -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.7);
+			-moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.7);
+			box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.7);
+
+
+        }
+
+        & > a {
+            color: #343a3b;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: 'MontserratSemibold';
+            text-transform: uppercase;
+            color: #fff;
+            background: #ff8b00;
+            padding: 7px 27px;
+			box-shadow: 5px 8px 10px -3px rgba(219,219,219,1);
+            &:hover{
+            	background: #ff3100;
+				box-shadow: 4px 6px 10px -3px rgba(219,219,219,1);
+            }
+        }
+    }
+
+    .vacansy-photo {
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+    .vacansy-header{
+    	height: 70px;
+    	display: flex;
+    	text-align: left;
+    	span{
+    		text-align: left;
+    	}
+    	.vacansy-name{
+    		padding-top: 20px;
+    		margin-left: 20px;
+    		font-family: 'MontserratSemibold';
+    		font-size: 18px;
+    	}
+    }
+    .vacansy-description{
+    	height: 150px;
+    	margin-top: 10px;
+    	overflow: hidden;
+    	text-align: left;
+    	label{
+        color: #343a3b;
+        font: 14px 'MontserratRegular';
+    	}
+    }
+
+    .item1 {
+    	background: url('./img/net-logo-png-4.png');
+		background-size: 65px 60px;
+    	height: 60px;
+    	background-position: center;
+    	width: 85px;
+    }
+
+    .item2 {
+    	background: url('./img/java_cup.svg');
+		background-size: 80px 70px;
+    	background-position: center;
+        width: 80px;
+        height: 70px;
+    }
+    .item3 {
+    	background: url('./img/magento.svg');
+		background-size: 80px 70px;
+    	background-position: center;
+        width: 80px;
+        height: 70px;
+    }
+    .temporary-text{
+    	text-align: center;
+    }
+}
+
+
+/*SHOW & HIDE Vacansy description*/
+.hide {
+    display: none; 
+}
+.hide + label ~ div{
+    display: none;
+}
+/* оформляем текст label */
+.hide + label {
+    cursor: pointer;
+    display: inline-block; 
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: #fff;
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+    position: fixed;
+    width: 100%;
+    margin-top: 10vh;
+    height: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    left: 0;
+    right: 0;
+    padding: 10% 25%; 
+    z-index: 2000;
+    background: linear-gradient(180deg, rgba(255, 255, 255,0.9) 10%, rgba(255,255,255,0.8) 80%), url('../MagentoMigrationPage/magento_migration.jpg');
+}
+i.fa-close{
+	font-size: 3.5rem;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	&:hover{
+        color: #333;
+	}
+}
+.vacansy-items-wrap li:hover{
+	height: 299px;
+
+}
+.services-block{
+	position: relative;
+}
+
+@media (max-width : 720px) { 
+    .vacansy-items-wrap {
+        justify-content: center;
+    }
+}

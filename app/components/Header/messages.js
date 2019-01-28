@@ -36,8 +36,8 @@ export default defineMessages({
     id: `${scope}.magento_development`,
     defaultMessage: 'Magento development',
   },
-  magento_extension_development: {
-    id: `${scope}.magento_extension_development`,
+  magento_extension: {
+    id: `${scope}.magento_extension`,
     defaultMessage: 'Extension development',
   },
   magento_hosting: {

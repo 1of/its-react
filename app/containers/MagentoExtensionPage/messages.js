@@ -8,8 +8,8 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.containers.MagentoExtensionPage';
 
 export default defineMessages({
-  our_portfolio: {
-    id: `${scope}.our_portfolio`,
-    defaultMessage: 'Our portfolio',
+  extension_development: {
+    id: `${scope}.extension_development`,
+    defaultMessage: 'Magento extension development',
   },
 });

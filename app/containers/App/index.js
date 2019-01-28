@@ -46,10 +46,7 @@ export default function App() {
         <Route path="/contacts" component={ContactsPage} />
         <Route path="/magento-design" component={MagentoDesignPage} />
         <Route path="/magento-development" component={MagentoDevelopmentPage} />
-        <Route
-          path="/magento-extension-development"
-          component={MagentoExtensionPage}
-        />
+        <Route path="/magento-extension" component={MagentoExtensionPage} />
         <Route path="/magento-hosting" component={MagentoHostingPage} />
         <Route path="/magento-migration" component={MagentoMigrationPage} />
         <Route path="/magento-support" component={MagentoSupportPage} />

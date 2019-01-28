@@ -31,11 +31,8 @@ class Header extends React.Component {
               <Link to="/magento-development" className="dropdown-item">
                 <FormattedMessage {...messages.magento_development} />
               </Link>
-              <Link
-                to="/magento-extension-development"
-                className="dropdown-item"
-              >
-                <FormattedMessage {...messages.magento_extension_development} />
+              <Link to="/magento-extension" className="dropdown-item">
+                <FormattedMessage {...messages.magento_extension} />
               </Link>
               <NavDropdown.Divider />
               <Link to="/magento-hosting" className="dropdown-item">
