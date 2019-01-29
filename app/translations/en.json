@@ -5,7 +5,7 @@
   "app.containers.HomePage.ourOffices": "Our offices",
   "app.containers.MagentoDesignPage.our_portfolio": "Our portfolio",
   "app.containers.MagentoDevelopmentPage.our_portfolio": "Our portfolio",
-  "app.containers.MagentoExtensionPage.our_portfolio": "Our portfolio",
+  "app.containers.MagentoExtensionPage.extension_development": "Magento extension development",
   "app.containers.MagentoHostingPage.our_portfolio": "Our portfolio",
   "app.containers.MagentoMigrationPage.our_portfolio": "Our portfolio",
   "app.containers.MagentoSupportPage.our_portfolio": "Our portfolio",
@@ -28,6 +28,6 @@
   "boilerplate.components.Header.services": "Services",
   "boilerplate.components.HomePageSlider.example": "Text",
   "boilerplate.components.HomePageSlider.yearsdev": "7 Years of Development",
-  "boilerplate.containers.LocaleToggle.en": "en",
-  "boilerplate.containers.LocaleToggle.ru": "ru"
+  "boilerplate.containers.LocaleToggle.en": "english",
+  "boilerplate.containers.LocaleToggle.ru": "russian"
 }

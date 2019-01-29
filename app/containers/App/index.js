@@ -44,12 +44,12 @@ export default function App() {
         <Route path="/career" component={CareerPage} />
         <Route path="/outstaffing" component={OutstaffingPage} />
         <Route path="/contacts" component={ContactsPage} />
-        <Route path="/magento-design" component={MagentoDesignPage} />
-        <Route path="/magento-development" component={MagentoDevelopmentPage} />
-        <Route path="/magento-extension" component={MagentoExtensionPage} />
-        <Route path="/magento-hosting" component={MagentoHostingPage} />
-        <Route path="/magento-migration" component={MagentoMigrationPage} />
-        <Route path="/magento-support" component={MagentoSupportPage} />
+        <Route path="/magento_design" component={MagentoDesignPage} />
+        <Route path="/magento_development" component={MagentoDevelopmentPage} />
+        <Route path="/magento_extension" component={MagentoExtensionPage} />
+        <Route path="/magento_hosting" component={MagentoHostingPage} />
+        <Route path="/magento_migration" component={MagentoMigrationPage} />
+        <Route path="/magento_support" component={MagentoSupportPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

@@ -7,31 +7,16 @@
 .top-header-content {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 0;
+	padding: 1px 0;
     p {
         display: inline-block;
         margin-right: 2%;
         margin-bottom: 0;
+	    color: $colorWhite;
+	    font: 18px 'MontserratSemibold';
+	    text-transform: uppercase;
     }
-    & p.skype{
-        & i.fa{
-            color: #fff;
-            font-size: 21px;
-        }        
-    }
-
-    & p.email, p.phone {
-
-        display: inline-block;
-        span{
-            color: $colorWhite;
-            font: 18px 'MontserratSemibold';
-            text-transform: uppercase;
-        }
-
-    }
-
-    & a {
+    a {
         text-decoration: none;
         font: 18px 'MontserratSemibold';
         text-transform: uppercase;
@@ -39,6 +24,38 @@
         transition: all 0.4s;
         &:hover{
             color: $red;
+	        text-decoration: none;
         }
     }
+	
+	i.fa-skype {
+		padding-right: 2px;
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width : 720px) {
+	
+	.top-header-content {
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		height: 64px;
+		position: relative;
+		
+		a, span {
+			font-size: 14px;
+			padding-left: 4px;
+		}
+		>div {
+			position: absolute;
+			right: 30px;
+			>select{
+				color: rgb(255, 139, 0); //set invisible select
+				width: 25px;
+			}
+		}
+	}
+	.top-header-content p.skype i.fa{
+		font-size: 16px;
+	}
 }

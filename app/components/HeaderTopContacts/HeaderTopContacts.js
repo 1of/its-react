@@ -11,19 +11,19 @@ class HeaderTopContacts extends React.Component {
           <LocaleToggle />
           <p className="skype">
             <span>
-              <i className="fa fa-skype" />
+              <i className="fa fa-skype" /> skype:
             </span>
-            <a href="skype:pevko-liliya?call">Skype Intechsoft Now</a>
+            <a href="skype:pevko-liliya?call"> Intechsoft Now</a>
           </p>
           <p className="email">
             <span>
-              <i className="fa fa-envelope" /> email :
+              <i className="fa fa-envelope" /> email:
             </span>
             <a href="mailto:cmo@intechsoft.net"> cmo@intechsoft.net</a>
           </p>
           <p className="phone">
             <span>
-              <i className="fa fa-phone-square" /> phone :
+              <i className="fa fa-phone-square" /> phone:
             </span>
             <a href="tel:+380505000564"> +380505000564</a>
           </p>

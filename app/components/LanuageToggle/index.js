@@ -16,12 +16,12 @@ function Toggle(props) {
   // If we have items, render them
   if (props.values) {
     content = props.values.map(value => (
-      <ToggleOption key={value} value={value} message={props.messages[value]} />
+      <ToggleOption key={value} value={value} message={props.messages[value]}/>
     ));
   }
 
   return (
-    <Select value={props.value} onChange={props.onToggle}>
+    <Select value={props.value} onChange={props.onToggle} className={'animated fadeIn'}>
       {content}
     </Select>
   );
