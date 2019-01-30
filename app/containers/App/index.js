@@ -16,7 +16,7 @@ import Header from 'components/Header/Header';
 import HomePage from 'containers/HomePage/Loadable';
 import PortfolioPage from 'containers/PortfolioPage/Loadable';
 import OutstaffingPage from 'containers/OutstaffingPage/Loadable';
-import ServicesPage from 'containers/ServicesPage/Loadable';
+import MagentoServicesPage from 'containers/MagentoServicesPage/Loadable';
 import CareerPage from 'containers/CareerPage/Loadable';
 import ContactsPage from 'containers/ContactsPage/Loadable';
 import MagentoDesignPage from 'containers/MagentoDesignPage/Loadable';
@@ -39,7 +39,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/services" component={ServicesPage} />
+        <Route path="/services" component={MagentoServicesPage} />
         <Route path="/portfolio" component={PortfolioPage} />
         <Route path="/career" component={CareerPage} />
         <Route path="/outstaffing" component={OutstaffingPage} />

@@ -5,7 +5,7 @@
  */
 import { defineMessages } from 'react-intl';
 
-export const scope = 'app.containers.ServicesPage';
+export const scope = 'app.containers.MagentoServicesPage';
 
 export default defineMessages({
   our_portfolio: {

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
@@ -14,23 +15,39 @@ const servicesMenuItems = [
   'magento_development',
   'magento_extension',
   'magento_hosting',
-  'magento_migration'
+  'magento_migration',
 ];
-const mainMenuItems = [
-  'portfolio',
-  'career',
-  'outstaffing',
-  'contacts'
-];
+const mainMenuItems = ['portfolio', 'career', 'outstaffing', 'contacts'];
+const style1 = {
+  background: 'red',
+
+};
+const style2 = {
+  background: 'blue',
+
+};
 
 class Header extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state = {};
-
+    this.state = {
+      isOpen: false
+    };
+this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  componentDidMount() {
+    let dropdown = ReactDOM.findDOMNode(this.refs.submenu);
+    let isExpanded = dropdown.children[0].getAttribute("aria-expanded");
+    isExpanded === 'true' ? this.setState({isOpen: true}) : this.setState({isOpen: false});
+  }
+
+  toggleMenu(event) {
+    let isExpanded = event.target.getAttribute("aria-expanded");
+
+    isExpanded === 'true' ? this.setState({isOpen: false}) : this.setState({isOpen: true});
+    console.log(this.state.isOpen, event.target);
+  }
 
   render() {
     return (
@@ -44,34 +61,43 @@ class Header extends React.Component {
           className="justify-content-end"
         >
           <Nav>
-
+            <NavLink to="/services"
+                     className="nav-link"
+                     activeStyle={{
+                       color: '#ff3100',
+                     }}><FormattedMessage {...messages.services} /></NavLink>
             <NavDropdown
-              title={<FormattedMessage {...messages.services} />}
               id="collasible-nav-dropdown"
-            >
-              {/*Dropdown menu items*/}
-              {
-                servicesMenuItems.map((item, index) =>
-                <NavLink key={index} to={'/'+item} className="dropdown-item">
-                  <FormattedMessage id={`boilerplate.components.Header.`+item} />
-                </NavLink>)
-              }
+              onMouseDown={this.toggleMenu}
+              style={this.state.isOpen ? style1 : style2}
 
+              ref="submenu"
+            >
+
+              {/* Dropdown menu items */}
+              {servicesMenuItems.map((item, index) => (
+                <NavLink key={index} to={`/${item}`} className="dropdown-item">
+                  <FormattedMessage
+                    id={`boilerplate.components.Header.${item}`}
+                  />
+                </NavLink>
+              ))}
             </NavDropdown>
 
-            {
-              mainMenuItems.map((item, index) =>
-                <NavLink
-                  key={index}
-                  to={'/'+item}
-                  className="nav-link"
-                  activeStyle={{
-                    color: "#ff3100"
-                  }}>
-                  <FormattedMessage id={`boilerplate.components.Header.`+item} />
-                </NavLink>)
-            }
-
+            {mainMenuItems.map((item, index) => (
+              <NavLink
+                key={index}
+                to={`/${item}`}
+                className="nav-link"
+                activeStyle={{
+                  color: '#ff3100',
+                }}
+              >
+                <FormattedMessage
+                  id={`boilerplate.components.Header.${item}`}
+                />
+              </NavLink>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

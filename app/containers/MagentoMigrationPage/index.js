@@ -11,6 +11,7 @@ import P from 'components/P';
 import H2 from 'components/H2';
 import messages from 'components/Header/messages';
 import bannerImage from './magento_migration.jpg';
+
 const Pfirst = styled(P)`
   padding: 50px 0 20px;
 `;

@@ -20,7 +20,22 @@
 		background: #ff8b00;
 	}
 }
+//.dropdown {
+//	z-index: 50;
+//}
+//.dropdown.fa:before{
+//	font-size: 55px;
+//	background: gray;
+//	position: absolute;
+//	top:0;
+//	color: red;
+//	z-index: 5;
+//}
 
+.dropdown-toggle::after {
+	visibility: hidden;
+	display: none;
+}
 
 
   

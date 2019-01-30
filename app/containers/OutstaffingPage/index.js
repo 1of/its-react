@@ -16,7 +16,7 @@ const H2extended = styled(H2)`
   padding: 50px 0;
 `;
 const PBold = styled(P)`
-  padding: 50px 0;
+  padding-bottom: 50px;
   font-weight: bold;
 `;
 

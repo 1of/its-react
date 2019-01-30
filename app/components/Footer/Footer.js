@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import FacebookLogo from './social_03.png';
 import DouLogo from './social_05.png';
 import LinkedinLogo from './social_07.png';
@@ -7,14 +8,21 @@ import InstagramLogo from './social_11.png';
 import FooterLogo from './logo_bigger.png';
 import './Footer.scss';
 /* eslint-disable react/prefer-stateless-function */
+let scroll = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 class Footer extends React.Component {
+
   render() {
     return (
       <footer className="footer commonStyle">
         <div className="wrapper footer-logo-wrap">
-          <a href="index.html">
+          <NavLink to="/" onClick={scroll}>
             <img src={FooterLogo} alt="Intechsoft" />
-          </a>
+          </NavLink>
           <div className="social-link">
             <a
               target="_blank"
@@ -22,7 +30,7 @@ class Footer extends React.Component {
               className="facebook"
             >
               <div>
-                <img src={FacebookLogo} alt="" />
+                <img src={FacebookLogo} alt="facebook" />
               </div>
             </a>
             <a
@@ -31,7 +39,7 @@ class Footer extends React.Component {
               className="dou"
             >
               <div>
-                <img src={DouLogo} alt="" />
+                <img src={DouLogo} alt="dou" />
               </div>
             </a>
             <a
@@ -40,7 +48,7 @@ class Footer extends React.Component {
               className="linkedin"
             >
               <div>
-                <img src={LinkedinLogo} alt="" />
+                <img src={LinkedinLogo} alt="linkedin" />
               </div>
             </a>
             <a target="_blank" href="https://t.me/Intechsoft" className="dou">
@@ -54,7 +62,7 @@ class Footer extends React.Component {
               className="instagram"
             >
               <div>
-                <img src={InstagramLogo} alt="" />
+                <img src={InstagramLogo} alt="instagram" />
               </div>
             </a>
           </div>

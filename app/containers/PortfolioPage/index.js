@@ -4,6 +4,9 @@
  */
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+import H2 from 'components/H2';
+import Wrapper from 'components/Wrapper';
 import './Portfolio.scss';
 
 /**
@@ -27,14 +30,20 @@ import ajour from './img/ajour.jpg';
 
 import messages from './messages';
 
+const H2extendet = styled(H2)`
+  padding: 50px 0;
+`;
+
 /* eslint-disable react/prefer-stateless-function */
 export default class Portfolio extends React.PureComponent {
   render() {
     return (
       <main>
-        <h1 className="intro-txt">
-          <FormattedMessage {...messages.our_portfolio} />
-        </h1>
+        <Wrapper>
+          <H2extendet>
+            <FormattedMessage {...messages.our_portfolio} />
+          </H2extendet>
+        </Wrapper>
         <section className="main-content">
           <div className="column-1">
             <div className="small-card">

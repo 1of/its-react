@@ -2,19 +2,16 @@
 .services-block{
     display: flex;
     margin: 0 auto;
-    background: #bbb9b9;
     background: linear-gradient(180deg, rgba(255, 255, 255,0.9) 10%,  #bbb9b9 80%), url('../MagentoMigrationPage/magento_migration.jpg');
-    padding: 20px 0 0 0;
+    padding: 20px 0;
 }
 
 .vacansy-items-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 80px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
     height: auto;
 
     li {
