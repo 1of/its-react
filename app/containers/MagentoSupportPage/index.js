@@ -24,7 +24,7 @@ const Items = [
   'back_up_monitoring',
   'deployment',
   'access_to_support',
-  'access_to_knowledge'
+  'access_to_knowledge',
 ];
 
 const Pfirst = styled(P)`
@@ -58,12 +58,10 @@ export default class MagentoSupportPage extends React.PureComponent {
             developers are always ready to help and resolve any problem.
           </Pfirst>
           <ul>
-            {Items.map((item,index) => (
+            {Items.map((item, index) => (
               <LI key={index}>
                 <I className="fa fa-check" />
-                <FormattedMessage
-                  id={`${scope}.${item}`}
-                />
+                <FormattedMessage id={`${scope}.${item}`} />
               </LI>
             ))}
           </ul>

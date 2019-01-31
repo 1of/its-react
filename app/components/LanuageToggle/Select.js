@@ -6,7 +6,7 @@ const Select = styled.select`
   padding-left: 22px;
   line-height: 1em;
   height: 20px;
-  width: 44px;
+  width: 45px;
   text-transform: uppercase;
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */

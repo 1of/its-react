@@ -21,3 +21,14 @@
 		}
 	}
 }
+
+@media only screen and (max-width : 768px) {
+	.header-banner{
+		.transparent-block{
+			h1 {
+				font-size: 1.8rem;
+				padding: 20% 10px;
+			}
+		}
+	}
+}

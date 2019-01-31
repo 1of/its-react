@@ -8,14 +8,13 @@ import InstagramLogo from './social_11.png';
 import FooterLogo from './logo_bigger.png';
 import './Footer.scss';
 /* eslint-disable react/prefer-stateless-function */
-let scroll = function () {
+const scroll = function() {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
 };
 class Footer extends React.Component {
-
   render() {
     return (
       <footer className="footer commonStyle">

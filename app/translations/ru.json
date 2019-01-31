@@ -40,6 +40,6 @@
   "boilerplate.components.Header.services": "Сервисы",
   "boilerplate.components.HomePageSlider.example": "Текст",
   "boilerplate.components.HomePageSlider.yearsdev": "7 лет разработки",
-  "boilerplate.containers.LocaleToggle.en": "Английский",
-  "boilerplate.containers.LocaleToggle.ru": "Русский"
+  "boilerplate.containers.LocaleToggle.en": "English",
+  "boilerplate.containers.LocaleToggle.ru": "Russian"
 }

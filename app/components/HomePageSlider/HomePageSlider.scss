@@ -28,8 +28,8 @@ span.carousel-control-next-icon {
 .carousel-caption {
     text-align: left;
     bottom: 50px;
+	font: 1.6rem 'MontserratRegular', sans-serif;
     p, span {
-        font: 1.6rem 'MontserratRegular', sans-serif;
         &.bolder-txt {
             font-weight: bold;
         }
@@ -41,7 +41,33 @@ span.carousel-control-next-icon {
     .caption-proj-img {
         position: absolute;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
     }
 }
+
+.bolder-txt>span{
+	font-weight: bold;
+}
 /*End Carousel block*/
+
+@media only screen and (max-width : 768px) {
+	.carousel-caption {
+		text-align: center;
+		bottom: 35px;
+		font-size: 1.3rem;
+		p.bolder-txt {
+				font-weight: bold;
+			}
+		.caption-img{
+			float: none;
+			display: block;
+			margin: auto;
+		}
+		.caption-proj-img {
+			display: block;
+			position: static;
+			width: 60px;
+			margin: auto;
+		}
+	}
+}

@@ -19,7 +19,7 @@ class HomePageSlider extends React.Component {
     this.state = {
       index: 0,
       direction: null,
-      interval: 7000,
+      interval: 25000,
     };
   }
 
@@ -77,15 +77,15 @@ class HomePageSlider extends React.Component {
                 More than 100 Magento projects
                 <br /> finished!
               </p>
+              <span>
+                Low operating costs <br />
+                company
+              </span>
               <img
                 src={Projection}
                 className="caption-proj-img"
                 alt="magento-projects-logo"
               />
-              <span>
-                Low operating costs <br />
-                company{' '}
-              </span>
             </Carousel.Caption>
           </div>
         </Carousel.Item>

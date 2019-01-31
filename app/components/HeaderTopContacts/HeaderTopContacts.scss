@@ -8,9 +8,11 @@
     display: flex;
     justify-content: flex-end;
 	padding: 1px 0;
+	max-width: 1170px;
+	margin: 0 auto;
     p {
         display: inline-block;
-        margin-right: 2%;
+        margin-left: 2%;
         margin-bottom: 0;
 	    color: $colorWhite;
 	    font: 18px 'MontserratSemibold';
