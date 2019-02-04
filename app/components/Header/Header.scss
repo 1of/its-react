@@ -11,15 +11,22 @@
 	-webkit-box-shadow: 0 2px 4px 0 rgba(124,124,124,.5);
 	box-shadow: 0 2px 4px 0 rgba(124,124,124,.5);
 	padding: 0;
+	font-family: 'MontserratRegular', sans-serif;
 }
 .navbar.sticky-top{
 	padding: 0;
 }
 
-.navbar-light .navbar-toggler {
-	border-color: transparent !important;
-	outline: none;
+.navbar-light {
+	.navbar-nav a.nav-link {
+		color: #333 ;
+	}
+	.navbar-toggler {
+		border-color: transparent !important;
+		outline: none;
+	}
 }
+
 
 //Menu Item
 .nav-link{

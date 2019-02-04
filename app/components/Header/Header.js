@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
@@ -19,28 +18,23 @@ const servicesMenuItems = [
   'magento_hosting',
   'magento_migration',
 ];
-const mainMenuItems = [
-  'portfolio',
-  'career',
-  'outstaffing',
-  'contacts'
-];
+const mainMenuItems = ['portfolio', 'career', 'outstaffing', 'contacts'];
 
 const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1170px;
-    margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
 `;
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //do something
+      // do something
     };
   }
 
@@ -48,55 +42,62 @@ class Header extends React.Component {
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
         <Wrapper>
-        <NavLink to="/" className="logo">
-          <img src={Logo} alt="Intechsoft" />
-        </NavLink>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse
-          id="responsive-navbar-nav"
-          className="justify-content-end"
-        >
-          <Nav>
-            <NavDropdown
-              id="collasible-nav-dropdown"
-              ref="submenu"
-              title={<NavLink
-                to="/services"
-                className="nav-link"
-                activeStyle={{
-                  color: '#ff3100'
-                }}
-                style={{padding: '0 5px 0 0'}}
+          <NavLink to="/" className="logo">
+            <img src={Logo} alt="Intechsoft" />
+          </NavLink>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
+            <Nav>
+              <NavDropdown
+                id="collasible-nav-dropdown"
+                title={
+                  <NavLink
+                    to="/services"
+                    className="nav-link"
+                    activeStyle={{
+                      color: '#ff3100',
+                    }}
+                    style={{ padding: '0 5px 0 0' }}
+                  >
+                    <FormattedMessage {...messages.services} />
+                  </NavLink>
+                }
               >
-                <FormattedMessage {...messages.services} />
-              </NavLink>}
-            >
-              {/* Dropdown menu items */}
-              {servicesMenuItems.map((item, index) => (
-                <NavLink key={index} to={`/${item}`} className="dropdown-item">
+                {/* Dropdown menu items */}
+                {servicesMenuItems.map((item, index) => (
+                  <NavLink
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={index}
+                    to={`/${item}`}
+                    className="dropdown-item"
+                  >
+                    <FormattedMessage
+                      id={`boilerplate.components.Header.${item}`}
+                    />
+                  </NavLink>
+                ))}
+              </NavDropdown>
+
+              {mainMenuItems.map((item, index) => (
+                <NavLink
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={index}
+                  to={`/${item}`}
+                  className="nav-link"
+                  activeStyle={{
+                    color: '#ff3100',
+                  }}
+                >
                   <FormattedMessage
                     id={`boilerplate.components.Header.${item}`}
                   />
                 </NavLink>
               ))}
-            </NavDropdown>
-
-            {mainMenuItems.map((item, index) => (
-              <NavLink
-                key={index}
-                to={`/${item}`}
-                className="nav-link"
-                activeStyle={{
-                  color: '#ff3100',
-                }}
-              >
-                <FormattedMessage
-                  id={`boilerplate.components.Header.${item}`}
-                />
-              </NavLink>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
+            </Nav>
+          </Navbar.Collapse>
         </Wrapper>
       </Navbar>
     );
