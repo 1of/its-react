@@ -8,7 +8,7 @@ import InstagramLogo from './social_11.png';
 import FooterLogo from './logo_bigger.png';
 import './Footer.scss';
 /* eslint-disable react/prefer-stateless-function */
-const scroll = function() {
+const scroll = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',

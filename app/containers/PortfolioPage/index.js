@@ -13,7 +13,7 @@ import './Portfolio.scss';
  * PhotoImages
  */
 import emmamason from './img/emmamason.jpg';
-import ashan from './img/ashan.png';
+import ashan from './img/ashan.jpg';
 import fairAudio from './img/fair-audio.jpg';
 import mossBros from './img/moss-bros.jpg';
 import alamar from './img/alamar.jpg';

@@ -8,8 +8,7 @@ import styled from 'styled-components';
 import Wrapper from 'components/Wrapper';
 import PageBanner from 'components/PageBanner/PageBanner';
 import P from 'components/P';
-import messages from './messages';
-import { scope } from './messages';
+import messages, { scope } from './messages';
 import bannerImage from './magento_support.jpg';
 
 const Items = [
@@ -54,12 +53,13 @@ export default class MagentoSupportPage extends React.PureComponent {
             Every single customer gets special 24/7 support from our developers.
             And any issue, happens with their store or project would be on the
             first place for Intechsoft team . The ntechsoft company is always
-            available with 24x7 Magento Support&Maintenance and our support
+            available with 24x7 Magento Support&amp;Maintenance and our support
             developers are always ready to help and resolve any problem.
           </Pfirst>
           <ul>
-            {Items.map((item, index) => (
-              <LI key={index}>
+            {Items.map(item => (
+              // eslint-disable-next-line react/no-array-index-key
+              <LI key={new Date().getTime()}>
                 <I className="fa fa-check" />
                 <FormattedMessage id={`${scope}.${item}`} />
               </LI>

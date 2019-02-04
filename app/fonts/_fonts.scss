@@ -52,9 +52,8 @@
 
 @font-face{
     font-family: 'MinionProRegular';
-    src: url('fonts/MinionPro-Regular/MinionPro-Regular.woff') format('woff'),
-         url('fonts/MinionPro-Regular/MinionPro-Regular.ttf') format('truetype'), 
-         url('fonts/MinionPro-Regular/MinionPro-Regular.svg') format('svg');
+    src: url("fonts/MinionPro-Regular/MinionPro-Regular.otf") format("opentype"),
+         url('fonts/MinionPro-Regular/MinionPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -83,8 +82,7 @@
     src: url('fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
     url('fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
     url('fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
-    url('fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
-    url('fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    url('fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

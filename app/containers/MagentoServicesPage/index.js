@@ -2,16 +2,16 @@
  * MagentoSupportPage
  *
  */
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import messages from 'components/Header/messages';
 import H2 from 'components/H2';
 import P from 'components/P';
 import Contacts from 'components/HomePageContacts/HomePageContacts';
 import Wrapper from 'components/Wrapper';
 import './MagentoServicesPage.scss';
+
 const H2extended = styled(H2)`
   padding: 50px 0;
 `;
@@ -125,7 +125,7 @@ export default class MagentoServicesPage extends React.PureComponent {
                 <p>
                   Every single customer gets special 24/7 support from our
                   developers. And any issue, happens with their store or project
-                  would be on the first place for Intechsoft{' '}
+                  would be on the first place for Intechsoft
                 </p>
                 <NavLink to="/magento_support">more information</NavLink>
               </li>

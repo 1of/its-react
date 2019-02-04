@@ -10,7 +10,7 @@ import Wrapper from 'components/Wrapper';
 import H2 from 'components/H2';
 
 import messages from 'components/Header/messages';
-import bannerImage from './contact_us.png';
+import bannerImage from './contact_us.jpg';
 import './ContactsPage.scss';
 
 const H2extended = styled(H2)`

@@ -60,7 +60,7 @@ class Header extends React.Component {
                     activeStyle={{
                       color: '#ff3100',
                     }}
-                    style={{ padding: '0 5px 0 0' }}
+                    style={{ padding: '0 20px 0 0' }}
                   >
                     <FormattedMessage {...messages.services} />
                   </NavLink>
