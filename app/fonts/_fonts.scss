@@ -2,6 +2,7 @@
 
 @font-face{
     font-family: 'MontserratRegular';
+    font-display: auto;
     src: url('fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
          url('fonts/Montserrat-Regular/Montserrat-Regular.woff2');
     font-weight: normal;
@@ -12,6 +13,7 @@
 
 @font-face{
     font-family: 'MontserratMedium';
+    font-display: auto;
     src: url('fonts/Montserrat-Medium/Montserrat-Medium.woff') format('woff'),
          url('fonts/Montserrat-Medium/Montserrat-Medium.woff2');
     font-weight: normal;
@@ -22,6 +24,7 @@
 
 @font-face{
     font-family: 'MontserratSemibold';
+    font-display: auto;
     src: url('fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff'),
          url('fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2');
     font-weight: normal;
@@ -32,6 +35,7 @@
 
 @font-face{
     font-family: 'ACaslonProRegular';
+    font-display: auto;
     src: url('fonts/ACaslonPro-Regular/ACaslonPro-Regular.woff') format('woff'),
          url('fonts/ACaslonPro-Regular/ACaslonPro-Regular.woff2');
     font-weight: normal;
@@ -42,6 +46,7 @@
 
 @font-face{
     font-family: 'ACaslonProSemibold';
+    font-display: auto;
     src: url('fonts/ACaslonPro-Semibold/ACaslonPro-Semibold.woff') format('woff'),
          url('fonts/ACaslonPro-Semibold/ACaslonPro-Semibold.eot') format('embedded-opentype');
     font-weight: normal;
@@ -52,6 +57,7 @@
 
 @font-face{
     font-family: 'MinionProRegular';
+    font-display: auto;
     src: url("fonts/MinionPro-Regular/MinionPro-Regular.otf") format("opentype"),
          url('fonts/MinionPro-Regular/MinionPro-Regular.woff') format('woff');
     font-weight: normal;
@@ -62,6 +68,7 @@
 
 @font-face{
     font-family: 'RalewayRegular';
+    font-display: auto;
     src: url('fonts/Raleway/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -69,6 +76,7 @@
 
 @font-face{
     font-family: 'RalewaySemibold';
+    font-display: auto;
     src: url('fonts/Raleway/Raleway-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -78,6 +86,7 @@
 
 @font-face {
     font-family: 'FontAwesome';
+    font-display: auto;
     src: url('fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0');
     src: url('fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
     url('fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 

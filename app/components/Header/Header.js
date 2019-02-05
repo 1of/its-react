@@ -1,9 +1,9 @@
+/* eslint-disable react/no-access-state-in-setstate */
 import React from 'react';
 import styled from 'styled-components';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
-// import NavLink from './NavLink';
 
 import messages from './messages';
 import Logo from './logo.svg';
@@ -35,10 +35,17 @@ class Header extends React.Component {
     super(props);
     this.state = {
       // do something
+      menuOpened: false,
     };
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  toggleMenu = () => {
+    this.setState({ menuOpened: !this.state.menuOpened });
+  };
+
   render() {
+    const isOpened = this.state.menuOpened;
     return (
       <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
         <Wrapper>
@@ -51,20 +58,21 @@ class Header extends React.Component {
             className="justify-content-end"
           >
             <Nav>
+              <NavLink
+                to="/services"
+                className="nav-link"
+                activeStyle={{
+                  color: '#ff3100',
+                }}
+              >
+                <FormattedMessage {...messages.services} />
+              </NavLink>
+
               <NavDropdown
                 id="collasible-nav-dropdown"
-                title={
-                  <NavLink
-                    to="/services"
-                    className="nav-link"
-                    activeStyle={{
-                      color: '#ff3100',
-                    }}
-                    style={{ padding: '0 20px 0 0' }}
-                  >
-                    <FormattedMessage {...messages.services} />
-                  </NavLink>
-                }
+                title={String.fromCharCode(160) + String.fromCharCode(160)}
+                className={isOpened ? 'arrow-up' : 'arrow-down'}
+                onToggle={this.toggleMenu}
               >
                 {/* Dropdown menu items */}
                 {servicesMenuItems.map((item, index) => (

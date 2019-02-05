@@ -7,7 +7,7 @@ const NotFoundPage = () => (
     <div>
       <h1 className="animated-bg">Page not found</h1>
       <p className="text-404">Sorry the page you requested not found</p>
-      <NavLink to="/main" className="link-home">
+      <NavLink to="/" className="link-home">
         Navigate to Home Page
       </NavLink>
     </div>
