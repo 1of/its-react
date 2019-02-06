@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import PageBanner from 'components/PageBanner/PageBanner';
 import Wrapper from 'components/Wrapper';
 import H2 from 'components/H2';
+import { Modal, Button } from 'react-bootstrap';
 
 import messages from 'components/Header/messages';
 import bannerImage from './contact_us.jpg';
@@ -18,7 +19,87 @@ const H2extended = styled(H2)`
 `;
 
 /* eslint-disable react/prefer-stateless-function */
-export default class ContactsPage extends React.PureComponent {
+class ContactsPage extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      showModal: false,
+      submited: false,
+    };
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleMessageChange = this.handleMessageChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleModalShow = this.handleModalShow.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
+  }
+
+  handleNameChange(event) {
+    this.setState({
+      name: event.target.value,
+    });
+  }
+
+  handleEmailChange(event) {
+    this.setState({
+      email: event.target.value,
+    });
+  }
+
+  handleMessageChange(event) {
+    this.setState({
+      message: event.target.value,
+    });
+  }
+
+  handleModalClose() {
+    this.setState({ showModal: false });
+  }
+
+  handleModalShow() {
+    this.setState({ showModal: true });
+  }
+
+  handleSubmit(event) {
+    const self = this;
+    event.preventDefault();
+    if (
+      (self.state.submited && self.state.name.length < 2) ||
+      self.state.message.length < 3
+    ) {
+      self.setState({ showModal: true });
+      return;
+    }
+    fetch(
+      'https://docs.google.com/forms/d/e/1FAIpQLSeK0Fm2qtm_wh2PTNQFU-WkK6J1OOWp7O-R1VGGmtZO8Peyug/formResponse',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        },
+        body: `entry.1139703929=${this.state.name}
+        &emailAddress=${this.state.email}
+        &entry.38433389=${this.state.message}`,
+      },
+    )
+      .then(response => {
+        if (response.status === 200) {
+          self.setState({ submited: true });
+        } else {
+          self.setState({ submited: false });
+        }
+      })
+      .then(() => {
+        // Success code goes here
+        self.setState({ name: '', email: '', message: '', showModal: true });
+      })
+      // Errors
+      .catch(() => {});
+  }
+
   render() {
     return (
       <main>
@@ -65,13 +146,20 @@ export default class ContactsPage extends React.PureComponent {
                 </p>
               </section>
               <section>
-                <form action="" className="main-form" id="contact-form">
+                <form
+                  action=""
+                  className="main-form"
+                  id="contact-form"
+                  onSubmit={this.handleSubmit}
+                >
                   <div className="form-control">
                     <input
                       type="text"
                       id="name"
                       name="name"
                       placeholder="Name"
+                      value={this.state.name}
+                      onChange={this.handleNameChange}
                       required
                     />
                     <input
@@ -79,7 +167,9 @@ export default class ContactsPage extends React.PureComponent {
                       id="email"
                       name="email"
                       placeholder="Email"
+                      value={this.state.email}
                       size="30"
+                      onChange={this.handleEmailChange}
                       required
                     />
                   </div>
@@ -89,6 +179,8 @@ export default class ContactsPage extends React.PureComponent {
                     cols="30"
                     rows="10"
                     placeholder="Your Message"
+                    value={this.state.message}
+                    onChange={this.handleMessageChange}
                   />
                   <p id="warning" />
                   <input type="submit" id="send-contact-btn" value="send" />
@@ -97,7 +189,25 @@ export default class ContactsPage extends React.PureComponent {
             </div>
           </div>
         </Wrapper>
+
+        <Modal show={this.state.showModal} onHide={this.handleModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Intechsoft</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {this.state.submited
+              ? 'Thank you! We will reply as soon as possible...'
+              : 'Something went wrong. Check your input fields...'}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleModalClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </main>
     );
   }
 }
+
+export default ContactsPage;
